@@ -1,35 +1,38 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<div align = center>
+<h1>shared_crud_local</h1>
+  <img alt="Static Badge" src="https://img.shields.io/badge/version-1.0.1-blue?link=https%3A%2F%2Fpub.dev%2Fpackages%2Fshared_crud_local"> <img alt="Static Badge" src="https://img.shields.io/badge/LICENSE-MIT-green?link=https%3A%2F%2Fopensource.org%2Flicense%2Fmit">
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+</div>
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
 
-# shared_crud_local
 
-Um package qeu visa facilitar implemnetação de um crud por meio de metodos mais robustos e faceis de implemnetar, lembrando muito o JPA do Java podendo mas com foco em Strings. Por fazer a uso do [shared_preferences](https://pub.dev/packages/shared_preferences) atende as implemnetações disposta pelo package.
+Um package que visa facilitar implementação de um CRUD por meio de métodos mais robustos e fáceis de implementar, lembrando muito o JPA do Java podendo, mas com foco em Strings. Por fazer a uso do [shared_preferences](https://pub.dev/packages/shared_preferences) atende as implementações disposta pelo package.
 
-Recomenda-se a consulta da documentação official caso queiro uma implemnetação a sua maneira [ Documentação do shared_preferences](https://pub.dev/packages/shared_preferences).
+Recomenda-se a consulta da documentação oficial caso queiro uma implementação a sua maneira [Documentação do shared_preferences](https://pub.dev/packages/shared_preferences).
 
-Esse package foi criado com o intuido de em poucas linah possa implemnetar um [CRUD](https://coodesh.com/blog/dicionario/o-que-e-crud/#:~:text=Primeiramente%2C%20CRUD%20%C3%A9%20o%20acr%C3%B4nimo,sua%20m%C3%A1quina%20ou%20na%20nuvem.) sem tantas dores de cabeça.
+Esse package foi criado com o intuito de em poucas linhas possa implementar um [CRUD](https://coodesh.com/blog/dicionario/o-que-e-crud/#:~:text=Primeiramente%2C%20CRUD%20%C3%A9%20o%20acr%C3%B4nimo,sua%20m%C3%A1quina%20ou%20na%20nuvem.) sem tantas dores de cabeça.
+
 
 ## Funcionalidades
+A recomendação para utilizar esse package é fazer uso das funções de encoding e decoding do próprio Dart, quando podemos transformar objetos é um String JSON, e localmente se consiga armazenar sendo mais prático a criação edição e o carregamento dessas informações.
 
-- Possibilidade de Armazenar e Ler Objetos unicos.
+- CRUD de  Objetos e Listas de objetos.
 
-- ## Possibilidade de Armazenar e Ler Listas de Objetos.
+```dart
+String  etBilu = '{"nome":"ET BILU", "idade":"3400"}'
+
+List<String> cafes = [
+'{"nome":"cuado", "sabor":"Meio Amargo"}',
+'{"nome":"Capuchino", "sabot":"Adocicado"}',
+'{"nome":"Expresso", "sabor":"encorpado"}'
+]
+  ```
 
 ## Uso do Package
 
-Adicione o package em seu porojeto atentando as verssões. Seguindo o passo a passo tera o package totalmente funcional e seu projeto.
+Adicione o package em seu projeto atentando as versões. Seguindo o passo a passo terá o package totalmente funcional e seu projeto.
 
-No aquivo _pubspec.yaml_ adicione a dependencia como vem abaixo ou por meio do comandoa :
+No aquivo _pubspec.yaml_ adicione a dependência como vem abaixo ou por meio do comando :
 
 - Manual:
 
@@ -44,8 +47,7 @@ dependencies:
 $ flutter pub add shared_crud_local
 ```
 
-Apos essa configuração verifice que o package se encontra nas dependencia do porjeto, caso esteja tudo ok basta estanciar o Shared preferences:
-
+Após essa configuração verifique que o package se encontra nas dependências do projeto, caso esteja tudo ok basta estanciar o Shared_preferences:
 ```dart
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -54,7 +56,7 @@ void main() async {
 }
 ```
 
-Uso mais simples,COMObjetos locais:
+Exemplo de uso com Objetos locais:
 
 ```dart
 // Salvar(CREATE) Objeto
@@ -71,4 +73,13 @@ Uso mais simples,COMObjetos locais:
   }
 ```
 
-## Additional information
+## Notas sobre a release 1.0.1 : 
+
+A versão atual um ponto 1.0.1 acaba de ser criada mas já traz em sua estrutura as principais funcionalidades para você implementar um CRUD básico, podendo já criar de maneira fácil o seu aplicativo sem tanta dor de cabeça.
+Esse projeto tem o objetivo de ser algo *opensource*, logo conto também com a sua contribuição caso queira tornar esse package cada vez melhor, Sinta-se à vontade para contribuir lembre-se que o conhecimento compartilhado gera resultados incríveis.
+
+---
+
+ ### Shared_crud_local desenvolvido por [José Gonçalves](https://github.com/JoseGoncalvess) 
+
+
