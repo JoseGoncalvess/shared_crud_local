@@ -1,7 +1,7 @@
 name: shared_crud_local
-description: "Um Packge para facilitar um a criação crud básico com enfoue em Local Storege"
+description: "Um Packge para facilitar um a criação crud básico com foco em local storage"
 version: 1.0.1
-homepage: "https://github.com/JoseGoncalvess/shared_crud_local"
+homepage: https://github.com/JoseGoncalvess/shared_crud_local
 
 environment:
   sdk: ^3.5.0

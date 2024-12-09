@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shared_crud_local/shared_crud_local.dart';
-
 import 'home_page.dart';
 
 abstract class HomeViewModel extends State<HomePage> {
