@@ -2,7 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedInstance {
   static SharedInstance? _instance;
-  late SharedPreferences _prefs;
+  static SharedPreferences? _prefs;
 
   SharedInstance._();
 
@@ -18,5 +18,11 @@ class SharedInstance {
     _prefs = await SharedPreferences.getInstance();
   }
 
-  SharedPreferences get preferences => _prefs;
+  SharedPreferences get preferences {
+    if (_prefs == null) {
+      throw Exception(
+          "SharedPreferences not initialized. Call getInstance() first.");
+    }
+    return _prefs!;
+  }
 }

@@ -18,16 +18,18 @@ class HomeView extends HomeViewModel {
               keyboardType: TextInputType.text,
               decoration: InputDecoration(border: OutlineInputBorder()),
             ),
-            const Text(
-              'Resultado das infomações Salvas',
+            Text(
+              'Resultado das infomações Salvas ${result}',
             ),
             Text(
               '$couter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             ElevatedButton(
-                onPressed: () => saveinfo, child: const Icon(Icons.save)),
-            const Spacer(),
+                onPressed: () => saveinfo(), child: const Icon(Icons.save)),
+            ElevatedButton(
+                onPressed: () => loadinfo(),
+                child: const Icon(Icons.view_carousel_outlined)),
           ],
         ),
       ),

@@ -11,6 +11,7 @@ class LocalService {
     await sharedPrefs.preferences.setString(key, object);
   }
 
+
   Future<String> loadObject(String key) async {
     final sharedPrefs = await _instance;
     return sharedPrefs.preferences.getString(key)!;
