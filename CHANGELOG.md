@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Correções na logicas e Exemplos.
+
 ## 1.0.2
 
 - Correções e Update na Documentação.

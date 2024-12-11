@@ -15,6 +15,7 @@ class HomeView extends HomeViewModel {
           children: <Widget>[
             TextField(
               controller: nomeController,
+              onChanged: (value) => updatetext(),
               keyboardType: TextInputType.text,
               decoration: InputDecoration(border: OutlineInputBorder()),
             ),
@@ -22,7 +23,7 @@ class HomeView extends HomeViewModel {
               'Resultado das infomações Salvas ${result}',
             ),
             Text(
-              '$couter',
+              '${nomeController.text}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             ElevatedButton(

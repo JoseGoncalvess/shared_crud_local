@@ -5,17 +5,9 @@ import 'home_page.dart';
 abstract class HomeViewModel extends State<HomePage> {
   LocalRepository repository = LocalRepository();
   TextEditingController nomeController = TextEditingController();
-  int _counter = 0;
-  int get couter => _counter;
 
   String _result = "";
   String get result => _result;
-
-  void incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   void saveinfo() async {
     await repository.save('"nome":"${nomeController.text}", "idade":"34"');
@@ -25,6 +17,12 @@ abstract class HomeViewModel extends State<HomePage> {
     Result response = await repository.load();
     setState(() {
       _result = response.sucess ?? "OPS ERRO";
+    });
+  }
+
+  void updatetext() {
+    setState(() {
+      nomeController;
     });
   }
 }
